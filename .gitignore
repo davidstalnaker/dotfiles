@@ -1,5 +1,7 @@
 /*
 !.*
+
+# From fry
 .CFUserTextEncoding
 .DS_Store
 .Trash
@@ -23,3 +25,13 @@
 .ssh/*
 !.ssh/*.pub
 !.ssh/authorized_keys
+
+# From hypnotoad
+.aptitude/
+.bash_logout
+.cache/
+.couchpotato/
+.profile
+.sabnzbd/
+.sudo_as_admin_successful
+.w3m/
