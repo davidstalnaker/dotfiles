@@ -2,7 +2,9 @@
 !.*
 
 # From fry
+.boxprefs
 .CFUserTextEncoding
+.dropbox
 .DS_Store
 .Trash
 .Xauthority
@@ -17,11 +19,14 @@
 .git
 .histfile
 .lesshst
+.rnd
 .smb
 .sqlite_history
 .subversion
 .viminfo
 .zcompdump
+.zsh-update
+.zsh_history
 .ssh/*
 !.ssh/*.pub
 !.ssh/authorized_keys
