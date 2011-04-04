@@ -9,7 +9,7 @@ if [ -f ~/.boxprefs ]
 fi
 if [ "$(id -u)" = "0" ]
 	then
-		COLOR=${$fg[red]%}
+		COLOR=%{$fg[red]%}
 fi
 
 PROMPT='
