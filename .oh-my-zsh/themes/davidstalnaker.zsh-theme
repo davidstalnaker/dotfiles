@@ -12,7 +12,7 @@ if [ "$(id -u 2> /dev/null)" = "0" ]
 		COLOR=%{$fg[red]%}
 fi
 
-PROMPT='$COLOR(%n@$BOXNAME %{$reset_color%}%c$COLOR)%{$reset_color%} '
+PROMPT='$COLOR(%n@$BOXNAME %{$reset_color%}%C$COLOR)%{$reset_color%} '
 RPROMPT=' $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on $COLOR"
