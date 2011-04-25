@@ -1,9 +1,9 @@
 # ssh to commonly accessed servers
-cs='oedipus.cs.rit.edu'
-alias sshcs='ssh des1613@$cs'
+alias sshcs='ssh des1613@glados.cs.rit.edu'
 alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@stalnaker.dyndns.org'
 alias sshm='ssh david@morbo'
 alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
+alias sshl='ssh david@david-stalnaker.com'
 
 alias gitissue='git log | head -n 6 | pbcopy'
 
@@ -28,22 +28,5 @@ function cdf()
 	if [ ! -z "$f_path" ]; then
 		echo "cd $f_path";
 		cd "$f_path";
-	fi
-}
-
-# cd to the current Path Finder directory
-function cdpf()
-{
-	pf_path=`osascript << EOS
-		tell application "Path Finder"
-			set the window_list to the Finder windows
-			set front_window to item 1 of window_list
-			set front_path to the POSIX path of the target of the front_window
-			return front_path
-		end tell     
-		EOS`
-	if [ ! -z "$pf_path" ]; then
-		echo "cd $pf_path";
-		cd "$pf_path";
 	fi
 }
