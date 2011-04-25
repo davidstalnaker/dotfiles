@@ -44,5 +44,5 @@ build/
 *.mode1v3
 *.mode2v3
 .gitignore
-*.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcodeproj/project.xcworkspace/*
 *.xcodeproj/xcuserdata/*
