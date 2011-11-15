@@ -3,3 +3,32 @@
 	email = david.stalnaker@gmail.com
 [core]
 	excludesfile = /Users/david/.gitignore-global
+[alias]
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	caa = commit -a --amend -C HEAD
+
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+
+	s = status -sb
+	d = diff
+	a = add
+	co = checkout
+	b = branch
+	l = log --oneline --decorate
+	f = fetch
+	p = push
+	u = pull
+	cp = cherry-pick
+	su = submodule update
+[push]
+	default = tracking
+[color]
+	ui = auto

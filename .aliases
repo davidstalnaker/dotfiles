@@ -4,6 +4,7 @@ alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@stalnaker.dyndns.org'
 alias sshm='ssh david@morbo'
 alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
 alias sshl='ssh david@david-stalnaker.com'
+alias g='git'
 
 alias gitissue='git log | head -n 6 | pbcopy'
 
