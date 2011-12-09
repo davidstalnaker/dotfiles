@@ -1,12 +1,21 @@
 # ssh to commonly accessed servers
 alias sshcs='ssh des1613@glados.cs.rit.edu'
+alias sshs='ssh des1613@saskatoon.cs.rit.edu'
 alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@stalnaker.dyndns.org'
 alias sshm='ssh david@morbo'
 alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
 alias sshl='ssh david@david-stalnaker.com'
-alias g='git'
 
-alias gitissue='git log | head -n 6 | pbcopy'
+# shortcuts
+alias g='git'
+alias s='cd ~/School'
+alias p='cd ~/Projects'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias whois="whois -h whois-servers.net"
 
 # regex find and replace on every filename in the current directory
 function renameFiles() {
