@@ -5,6 +5,5 @@
 !.gitignore
 !.gitignore-global
 !.oh-my-zsh/
-!.ssh/*.pub
 !.ssh/authorized_keys
 !.zshrc
