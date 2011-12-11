@@ -2,7 +2,7 @@
 	name = David Stalnaker
 	email = david.stalnaker@gmail.com
 [core]
-	excludesfile = /Users/david/.gitignore-global
+	excludesfile = ~/.gitignore-global
 [alias]
 	c = commit
 	ca = commit -a
