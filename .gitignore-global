@@ -46,3 +46,8 @@ build/
 .gitignore
 *.xcodeproj/project.xcworkspace/*
 *.xcodeproj/xcuserdata/*
+
+# Python #
+##########
+*.pyc
+
