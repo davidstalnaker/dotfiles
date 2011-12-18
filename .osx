@@ -114,7 +114,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Remove useless icons from Safari’s bookmarks bar
 # defaults write com.apple.Safari ProxiesInBookmarksBar "()"
