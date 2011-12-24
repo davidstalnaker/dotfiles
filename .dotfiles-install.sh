@@ -18,7 +18,7 @@ then
 else
 	
 
-	#rsync -avPr --ignore-existing --remove-source-files $BASE_DIR/ $INSTALL_DIR
+	rsync -avPr --ignore-existing --remove-source-files $BASE_DIR/ $INSTALL_DIR
 
 	if [ $(ls -A1 | wc -l) -eq 0 ]
 	then
