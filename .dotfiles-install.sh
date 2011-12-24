@@ -19,7 +19,9 @@ else
 	
 
 	rsync -avPr --ignore-existing --remove-source-files $BASE_DIR/ $INSTALL_DIR
-
+	
+	find . -type d -print0 | xargs -0 rmdir --ignore-fail-on-non-empty --parents 2> /dev/null
+	
 	if [ $(ls -A1 | wc -l) -eq 0 ]
 	then
 		rmdir -- "$(pwd -P)"
