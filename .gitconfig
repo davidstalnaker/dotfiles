@@ -25,10 +25,12 @@
 	l = log --oneline --decorate
 	f = fetch
 	p = push
-	u = pull
+	pu = pull
 	cp = cherry-pick
 	su = submodule update
 [push]
 	default = tracking
 [color]
 	ui = auto
+[diff]
+	external = /Users/david/git-diff-cmd.sh

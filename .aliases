@@ -1,15 +1,16 @@
 # ssh to commonly accessed servers
-alias sshcs='ssh des1613@glados.cs.rit.edu'
-alias sshs='ssh des1613@saskatoon.cs.rit.edu'
-alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@stalnaker.dyndns.org'
+alias sshcs='ssh glados.cs.rit.edu'
+alias sshs='ssh saskatoon.cs.rit.edu'
+alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@hypnotoad.local 2> /dev/null || ssh david@stalnaker.dyndns.org'
 alias sshm='ssh david@morbo'
 alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
 alias sshl='ssh david@david-stalnaker.com'
 
 # shortcuts
 alias g='git'
-alias s='cd ~/School'
-alias p='cd ~/Projects'
+alias school='cd ~/School'
+alias projects='cd ~/Projects'
+alias work='cd ~/Documents/Work/DPRL/Segmenter'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
