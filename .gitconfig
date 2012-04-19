@@ -33,4 +33,4 @@
 [color]
 	ui = auto
 [diff]
-	external = /Users/david/git-diff-cmd.sh
+	external = /Users/david/.scripts/git-diff-cmd.sh
