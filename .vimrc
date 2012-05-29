@@ -41,14 +41,6 @@ set hlsearch
 nnoremap <leader><space> :noh<CR>
 set listchars=tab:▸\ ,eol:¬
 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 set mouse=a
 set wildmenu
 set wildmode=list:longest,full
