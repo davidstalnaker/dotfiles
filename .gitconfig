@@ -3,6 +3,7 @@
 	email = david.stalnaker@gmail.com
 [core]
 	excludesfile = ~/.gitignore-global
+	editor = /usr/bin/vim
 [alias]
 	c = commit
 	ca = commit -a
