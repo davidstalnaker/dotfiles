@@ -9,14 +9,21 @@ filetype plugin indent on
 
 colorscheme molokai
 set guifont=Inconsolata:h14
-set cul
+set cursorline
 hi CursorLine term=none cterm=none ctermbg=235
 set scrolloff=5
-set showmatch
 set number
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
+
+function Kees_settabs()
+    if len(filter(getbufline(winbufnr(0), 1, "$"), 'v:val =~ "^\\t"')) > len(filter(getbufline(winbufnr(0), 1, "$"), 'v:val =~ "^ "'))
+        set noexpandtab
+    endif
+endfunction
+autocmd BufReadPost * call Kees_settabs()
 
 " NERDTREE
 autocmd vimenter * if !argc() | NERDTree | endif
