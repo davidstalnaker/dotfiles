@@ -51,3 +51,4 @@ set listchars=tab:▸\ ,eol:¬
 set mouse=a
 set wildmenu
 set wildmode=list:longest,full
+vnoremap <leader>r "hy:.,$s/<C-r>h//gc<left><left><left>
