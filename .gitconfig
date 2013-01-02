@@ -33,7 +33,5 @@
 	default = tracking
 [color]
 	ui = auto
-[diff]
-	external = /Users/david/.scripts/git-diff-cmd.sh
 [rerere]
 	enabled = 1
