@@ -47,6 +47,10 @@ build/
 *.xcodeproj/project.xcworkspace/*
 *.xcodeproj/xcuserdata/*
 
+# IntelliJ / PyCharm #
+######################
+.idea/
+
 # Python #
 ##########
 *.pyc
