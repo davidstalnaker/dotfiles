@@ -18,13 +18,13 @@ c = get_config()
 # c.InteractiveShellApp.code_to_run = ''
 
 # lines of code to run at IPython startup.
-c.InteractiveShellApp.exec_lines = ['%autoreload 2']
+# c.InteractiveShellApp.exec_lines = ['%autoreload 2']
 
 # If true, an 'import *' is done from numpy and pylab, when using pylab
 # c.InteractiveShellApp.pylab_import_all = True
 
 # A list of dotted module names of IPython extensions to load.
-c.InteractiveShellApp.extensions = ['autoreload']
+# c.InteractiveShellApp.extensions = ['autoreload']
 
 # dotted module name of an IPython extension to load.
 # c.InteractiveShellApp.extra_extension = ''
