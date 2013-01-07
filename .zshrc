@@ -1,23 +1,42 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+source ~/.aliases
 
-# Set to the name theme to load.
-# Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="davidstalnaker"
+autoload -U colors && colors
+autoload -U compinit && compinit
+autoload -U promptinit && promptinit
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+# completion
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+bindkey '^[[Z' reverse-menu-complete
+setopt complete_in_word
+setopt always_to_end
+setopt correctall
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3 + 1))numeric)'
+zstyle ':completion:*:*:*:*:*' menu select
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# history
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt append_history
+setopt extended_history
+setopt hist_verify
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+if [ -f ~/.boxprefs ]
+	then
+		source ~/.boxprefs
+	else
+		COLOR=%{$fg[white]%}
+fi
+if [ "$(id -u 2> /dev/null)" = "0" ]
+	then
+		COLOR=%{$fg[red]%}
+fi
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew pip)
 
-source $ZSH/oh-my-zsh.sh
+PS1="$COLOR(%n@%m %{$reset_color%}%C$COLOR)%{$reset_color%} "
 
-# Customize to your needs...
