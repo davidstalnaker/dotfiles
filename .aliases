@@ -7,6 +7,7 @@ alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
 alias sshl='ssh david@david-stalnaker.com'
 
 # shortcuts
+alias l='ls -al'
 alias g='git'
 alias school='cd ~/School'
 alias projects='cd ~/Projects'
