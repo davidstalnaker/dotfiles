@@ -55,3 +55,6 @@ set mouse=a
 set wildmenu
 set wildmode=list:longest,full
 vnoremap <leader>r "hy:.,$s/<C-r>h//gc<left><left><left>
+
+" Consistent color of gutter.
+highlight clear SignColumn
