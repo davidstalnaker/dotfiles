@@ -29,6 +29,12 @@ autocmd BufReadPost * call Kees_settabs()
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+let g:ctrlp_map = '<c-o>'
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprev<CR>
+inoremap <C-n> <ESC>:tabnext<CR>
+inoremap <C-p> <ESC>:tabprev<CR>
+
 let mapleader = ","
 nnoremap <leader>nt :NERDTreeToggle<CR>
 set laststatus=2
