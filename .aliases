@@ -1,6 +1,6 @@
 # ssh to commonly accessed servers
 alias sshcs='ssh glados.cs.rit.edu'
-alias sshs='ssh saskatoon.cs.rit.edu'
+alias sshs='ssh saskatoon.cs.rit.edu -t tmux attach -t ssh'
 alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@hypnotoad.local 2> /dev/null || ssh david@stalnaker.dyndns.org'
 alias sshm='ssh david@morbo'
 alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
