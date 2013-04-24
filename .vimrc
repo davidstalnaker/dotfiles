@@ -4,6 +4,10 @@ set background=dark
 set shortmess+=I
 
 call pathogen#infect()
+
+" golang
+set rtp+=/usr/local/go/misc/vim
+
 syntax on
 filetype plugin indent on
 
