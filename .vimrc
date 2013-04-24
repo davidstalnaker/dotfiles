@@ -33,11 +33,18 @@ autocmd BufReadPost * call Kees_settabs()
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+let g:ctrlp_map = '<c-o>'
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprev<CR>
+inoremap <C-n> <ESC>:tabnext<CR>
+inoremap <C-p> <ESC>:tabprev<CR>
+
 let mapleader = ","
-nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 set laststatus=2
 
-inoremap jj <ESC>
+let g:Powerline_symbols = 'fancy'
+
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>w <C-w>v<C-w>l
@@ -60,7 +67,8 @@ set wildmenu
 set wildmode=list:longest,full
 vnoremap <leader>r "hy:.,$s/<C-r>h//gc<left><left><left>
 
-" vim-latex
+highlight clear SignColumn
+
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_pdf = 'latexmk -output-directory=output -pdf -f $*'
