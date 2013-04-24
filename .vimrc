@@ -55,3 +55,8 @@ set mouse=a
 set wildmenu
 set wildmode=list:longest,full
 vnoremap <leader>r "hy:.,$s/<C-r>h//gc<left><left><left>
+
+" vim-latex
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'latexmk -output-directory=output -pdf -f $*'
