@@ -36,7 +36,7 @@ inoremap <C-n> <ESC>:tabnext<CR>
 inoremap <C-p> <ESC>:tabprev<CR>
 
 let mapleader = ","
-nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 set laststatus=2
 
 inoremap jj <ESC>
