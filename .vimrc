@@ -39,7 +39,8 @@ let mapleader = ","
 nnoremap <leader>n :NERDTreeToggle<CR>
 set laststatus=2
 
-inoremap jj <ESC>
+let g:Powerline_symbols = 'fancy'
+
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>w <C-w>v<C-w>l
