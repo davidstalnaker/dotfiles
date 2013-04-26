@@ -27,7 +27,7 @@ set expandtab                    "use spaces for tabs
 " theme
 colorscheme molokai
 set background=dark
-set guifont=Monaco:h12
+set guifont=Monaco:h11
 set cursorline
 highlight CursorLine term=none cterm=none ctermbg=235
 set listchars=tab:▸\ ,eol:¬
@@ -72,7 +72,7 @@ call pathogen#infect()
 " nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeTabsToggle<CR>
 
 " ctrl-p (mapped to ctrl-o...)
 let g:ctrlp_map = '<c-o>'
