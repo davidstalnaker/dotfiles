@@ -10,12 +10,10 @@ bindkey '\e[B' history-beginning-search-forward
 bindkey '^[[Z' reverse-menu-complete
 setopt complete_in_word
 setopt always_to_end
-setopt correctall
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3 + 1))numeric)'
 zstyle ':completion:*:*:*:*:*' menu select
 
 # history
