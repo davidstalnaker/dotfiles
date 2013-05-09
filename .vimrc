@@ -76,6 +76,10 @@ nnoremap <leader>n :NERDTreeTabsToggle<CR>
 
 " ctrl-p (mapped to ctrl-o...)
 let g:ctrlp_map = '<c-o>'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
 
 " powerline
 let g:Powerline_symbols = 'fancy'
