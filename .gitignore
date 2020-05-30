@@ -1,8 +1,0 @@
-.ssh
-!.ssh/authorized_keys
-
-.ipython
-!.ipython/*.py
-
-old
-.vim/.netrwhist

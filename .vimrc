@@ -4,10 +4,7 @@ syntax on                        "enable syntax highlighting
 filetype plugin indent on        "enable filetype detection
 set shortmess+=I                 "don't show intro screen
 set scrolloff=5                  "number of lines of padding
-set laststatus=2                 "always draw status line
-set number                       "line numbers
 set encoding=utf8                "use unicode
-set mouse=a                      "enable mouse support
 set showmatch                    "show matching brackets / parens
 set wildmenu                     "autocompletion for commands
 set wildmode=list:longest,full
@@ -19,19 +16,14 @@ set incsearch                    "search as you type
 set hlsearch                     "show previous search results
 
 " tabs
-set tabstop=4                    "tabs are 4 spaces
-set softtabstop=4                "soft tabs are 4 spaces
-set shiftwidth=4                 "(auto)indent inserts 4 spaces
+set tabstop=2                    "tabs are 2 spaces
+set softtabstop=2                "soft tabs are 2 spaces
+set shiftwidth=2                 "(auto)indent inserts 2 spaces
 set expandtab                    "use spaces for tabs
 
 " theme
-colorscheme molokai
-set background=dark
-set guifont=Monaco:h11
 set cursorline
 highlight CursorLine term=none cterm=none ctermbg=235
-set listchars=tab:▸\ ,eol:¬
-highlight clear SignColumn
 
 "------------------ mappings --------------------
 
@@ -55,39 +47,9 @@ nnoremap <C-l> <C-w>l
 nnoremap j gj
 nnoremap k gk
 
-" make
-nnoremap <leader>m :make<CR>
-
 " replace from selection
 vnoremap <leader>r "hy:.,$s/<C-r>h//gc<left><left><left>
 
 " clear selection
 nnoremap <leader><space> :noh<CR>
 
-"----------------- plugins ---------------------
-
-" pathogen for plugins
-call pathogen#infect()
-
-" nerdtree
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-nnoremap <leader>n :NERDTreeTabsToggle<CR>
-
-" ctrl-p (mapped to ctrl-o...)
-let g:ctrlp_map = '<c-o>'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$'
-  \ }
-
-" powerline
-let g:Powerline_symbols = 'fancy'
-
-" vim-latex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'latexmk -output-directory=output -pdf -f $*'
-
-" golang
-set rtp+=/usr/local/go/misc/vim

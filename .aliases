@@ -1,26 +1,9 @@
-# ssh to commonly accessed servers
-alias sshcs='ssh glados.cs.rit.edu'
-alias sshs='ssh saskatoon.cs.rit.edu -t tmux attach -t ssh'
-alias sshh='ssh david@hypnotoad 2> /dev/null || ssh david@hypnotoad.local 2> /dev/null || ssh david@stalnaker.dyndns.org'
-alias sshm='ssh david@morbo'
-alias nfsn='ssh dizman101_davids@ssh.phx.nearlyfreespeech.net'
-alias sshl='ssh david@david-stalnaker.com'
-
 # shortcuts
 alias l='ls -al'
 alias g='git'
-alias school='cd ~/School'
-alias projects='cd ~/Projects'
-alias work='cd ~/Documents/Work/DPRL/Segmenter'
 
-# osx applications
-alias skim='open -a /Applications/Skim.app'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-alias whois="whois -h whois-servers.net"
+# dotfiles
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # regex find and replace on every filename in the current directory
 function renameFiles() {

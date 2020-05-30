@@ -1,10 +1,13 @@
 source ~/.aliases
 
+export TERM=xterm-256color
+
 autoload -U colors && colors
 autoload -U compinit && compinit
 autoload -U promptinit && promptinit
 
 # completion
+bindkey -e
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 bindkey '^[[Z' reverse-menu-complete
@@ -15,26 +18,19 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-setopt append_history
+setopt inc_append_history
 setopt extended_history
 setopt hist_verify
 
-if [ -f ~/.boxprefs ]
-	then
-		source ~/.boxprefs
-	else
-		COLOR=%{$fg[white]%}
-fi
-if [ "$(id -u 2> /dev/null)" = "0" ]
-	then
-		COLOR=%{$fg[red]%}
-fi
+COLOR=%{$fg[green]%}
 
+export EDITOR=vi
 
-PS1="$COLOR(%n@%m %{$reset_color%}%C$COLOR)%{$reset_color%} "
-
+PS1="$COLOR(%~)%{$reset_color%} "

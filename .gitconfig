@@ -1,37 +1,31 @@
+# This is Git's per-user configuration file.
 [user]
-	name = David Stalnaker
-	email = david.stalnaker@gmail.com
+  name = David Stalnaker
+  email = david.stalnaker@gmail.com
 [core]
-	excludesfile = ~/.gitignore-global
-	editor = /usr/bin/vim
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
 [alias]
-	c = commit
-	ca = commit -a
-	cm = commit -m
-	cam = commit -am
-	caa = commit -a --amend -C HEAD
+  c = commit
+  amend = commit -a --amend --no-edit
+  reword = commit --amend
 
-	r = reset
-	r1 = reset HEAD^
-	r2 = reset HEAD^^
-	rh = reset --hard
-	rh1 = reset HEAD^ --hard
-	rh2 = reset HEAD^^ --hard
-
-	s = status -sb
-	d = diff
-	a = add
-	co = checkout
-	b = branch
-	l = log --oneline --decorate
-	f = fetch
-	p = push
-	pu = pull
-	cp = cherry-pick
-	su = submodule update
-[push]
-	default = tracking
+  s = status -sb
+  d = diff
+  du = diff @{upstream}
+  a = add
+  co = checkout
+  b = branch
+  l = log --oneline --graph
+  f = fetch
+  p = push
+  pu = pull
+  cp = cherry-pick
+  su = submodule update
+  j = checkout HEAD~1
 [color]
-	ui = auto
+  ui = auto
 [rerere]
-	enabled = 1
+  enabled = 1
+[pull]
+  rebase = true
