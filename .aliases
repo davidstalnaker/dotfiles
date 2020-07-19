@@ -1,6 +1,7 @@
 # shortcuts
 alias l='ls -al'
 alias g='git'
+alias h="history 1 | grep"
 
 # dotfiles
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
