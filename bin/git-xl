@@ -1,5 +1,5 @@
 #!/bin/sh
 
 REFS=`git for-each-ref --format='%(refname:short)' refs/heads`
-ROOT=`git merge-base --octopus $REFS origin/master HEAD`
-echo "$REFS origin/master HEAD" | xargs printf -- "$ROOT~1..%s\n" | xargs git log --graph --oneline
+ROOT=`git merge-base --octopus $REFS origin/main HEAD`
+echo "$REFS origin/main HEAD" | xargs printf -- "$ROOT~1..%s\n" | xargs git log --graph --oneline
