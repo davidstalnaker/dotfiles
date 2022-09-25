@@ -10,6 +10,8 @@ autoload -U promptinit && promptinit
 bindkey -e
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 bindkey '^[[Z' reverse-menu-complete
 setopt complete_in_word
 setopt always_to_end
